@@ -1,3 +1,65 @@
 body {
-    background: url("images/bg-exodia.jpg");
+    background-image: url("https://i.imgur.com/i5cuu4o.png");
+    color: red;
+    display: flex;
+    flex-direction: column;
+    header {
+        text-align: center;
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    section{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    article{
+        width: 50%;
+        div{
+        margin-top: 10%;
+        }
+        .calculateur{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            @media (max-width: 700px) {
+                flex-direction: column;
+            }
+            button{
+            margin: 1%;
+            font-weight: bold;
+            font-size: 1.2rem;
+            }
+        }
+        }
+    }
+}
+
+.life_points{
+    font-size: 6rem;
+    background: url("./images/pouet2.png");
+}
+
+#player1_name, #player2_name {
+    width: 60%;
+    margin: 10% auto;
+}
+
+footer{
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+#calculateur__buttons {
+    display: flex;
+    margin-left: 3px;
 }
