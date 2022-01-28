@@ -1,6 +1,16 @@
-/*let player1Name = document.getElementById('player1');
-player1Name.innerHTML = "Nom rentré par l'utilisateur 1.";
+let player1Name = document.getElementById('player1');
+let player1_inputName = document.querySelector("#player1_name input");
+let player1_inputNameParent = document.getElementById("player1_name")
 
+player1_inputName.addEventListener("change", function(event) {
+    if (event.target.value != "") {
+        player1Name.innerHTML = "Player 1: <br>" + event.target.value;
+        player1_inputNameParent.removeChild(player1_inputName);
+    }
+    //Rajouter de la mise en forme
+});
+
+/*
 let player2Name = document.getElementById('player2');
 player2Name.innerHTML = "Nom rentré par l'utilisateur 2.";
 
@@ -18,32 +28,28 @@ let changeBackground = document.getElementsByTagName('body');
 
 //Ci-dessous, le bloc pour le calcul des life-points du joueur 1
 */
-let player1Name_BtnPlus = document.querySelector('#article_player1 button.btn.btn-success');
+let player1_BtnPlus = document.querySelector('#article_player1 button.btn.btn-success');
 let player1_LifePoints = document.querySelector('#article_player1 h2');
 let player1_inputCalculator = document.querySelector('#article_player1 .calculateur input');
 let player1_newInputCalculator;
 
 player1_inputCalculator.addEventListener('input', function(e) {
-    /*if (Number.isNaN(e.target.value)) {
-        return "coucou";
-    } else { */
+    if (isNaN(e.target.value)) {
+        alert("Veuillez saisir un nombre entier.")
+        return e.target.value = "";
+    } else {
     player1_newInputCalculator = e.target.value;
-    //}
+    }
 });
 
-player1Name_BtnPlus.addEventListener("click", function() {
+
+player1_BtnPlus.addEventListener("click", function() {
     let player1_actualLifePoints = player1_LifePoints.textContent;
     let player1_LifePointsModifier = parseFloat(player1_actualLifePoints) + parseFloat(player1_newInputCalculator);
-    player1_LifePoints.innerText = player1_LifePointsModifier;
-    /*while (parseFloat(player1_actualLifePoints) < parseFloat(player1_LifePointsModifier)) {
-        parseFloat(player1_actualLifePoints)++;
-        player1_LifePoints.innerText = parseFloat(player1_actualLifePoints);
-    }; */
+    //player1_LifePoints.innerText = player1_LifePointsModifier;
+
+    while (parseFloat(player1_actualLifePoints) <= parseFloat(player1_LifePointsModifier)) {
+        player1_LifePoints.innerText = player1_actualLifePoints++;
+    };
+
 });
-
-
-
-let player2_name = document.createElement('div class="form-group" id="player2_name"');
-let input_player2 = document.getElementById("article_player2");
-input_player2.removeChild(player2_name);
-
