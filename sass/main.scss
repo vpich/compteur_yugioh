@@ -1,6 +1,9 @@
 body {
-    background-image: url("https://i.imgur.com/i5cuu4o.png");
-    color: red;
+    background-image: url("../../images/bg_egyptian_gods.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-shadow: black 0.4em 0.4em 0.4em;
     display: flex;
     flex-direction: column;
     header {
@@ -40,7 +43,10 @@ main{
 
 .life_points{
     font-size: 6rem;
-    background: url("./images/pouet2.png");
+    background: url("../../images/pouet2.png");
+    height: 164px;
+    width: 216px;
+    color: yellow;
 }
 
 #player1_name, #player2_name {
