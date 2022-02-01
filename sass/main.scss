@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../images/bg_egyptian_gods.jpg");
+    background-image: url("https://wallpaperaccess.com//full/127131.jpg");
     background-position: center;
     background-size: cover;
     color: white;
@@ -9,9 +9,12 @@ body {
     header {
         text-align: center;
         margin: 10px;
-        a:link {
+        a {
          text-decoration:none;
          color: white;
+         &:hover {
+            color: yellow;
+         }
         }
     }
 }
@@ -51,52 +54,6 @@ main{
     }
 }
 
-.life_points{
-    font-size: 6rem;
-    background: url("../../images/pouet2.png");
-    background-size: cover;
-    height: 180px;
-    width: 230px;
-    color: yellow;
-    display: inline-block;
-    margin-top: 20px;
-    text-align: center;
-    padding-top: 20px;
-    border: outset rgb(204, 148, 5);
-    box-shadow: 6px 6px 5px black;
-}
-
-#player1_name, #player2_name {
-    width: 60%;
-    margin: 10% auto;
-}
-
-footer{
-    text-align: center;
-    margin-top: 20px;
-    color: white;
-}
-
-@media (max-width: 750px) {
-    main {
-        flex-direction: column;
-    }
-}
-
-#calculateur__buttons, #calculator__buttons {
-    display: flex;
-    margin-left: 3px;
-    align-items: right;
-}
-
-img {
-    position: absolute;
-    border-style: ridge;
-    border-color: brown;
-    bottom: 0px;
-    right: 0px;
-}
-
 #player1, #player2 {
     background-color: rgba(204, 148, 5, 0.5);
     border-radius: 15px;
@@ -113,7 +70,51 @@ img {
     }
 }
 
+#player1_name, #player2_name {
+    width: 60%;
+    margin: 10% auto;
+}
+
+#calculateur__buttons, #calculator__buttons {
+    display: flex;
+    margin-left: 3px;
+    align-items: right;
+}
+
+.life_points{
+    font-size: 6rem;
+    background: url("../../images/pouet2.jpg");
+    background-size: cover;
+    height: 180px;
+    width: 230px;
+    color: yellow;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 20px;
+    border: outset rgb(204, 148, 5);
+    box-shadow: 6px 6px 5px black;
+}
+
 #player1_historiqueCalcul, #player2_historiqueCalcul {
     height: 170px;
     resize: none;
+}
+
+footer{
+    text-align: center;
+    margin-top: 20px;
+    img {
+        position: absolute;
+        border-style: ridge;
+        border-color: brown;
+        bottom: 0px;
+        right: 0px;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        flex-direction: column;
+    }
 }
