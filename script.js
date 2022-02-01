@@ -16,11 +16,10 @@ function playLpToZero() {
     lpToZero.play();
 };
 
-//optionnel
 function playTimeToDuel() {
     const timeToDuel = new Audio("./sounds/cest-lheure-du-dudududuel.mp3");
     timeToDuel.play();
-}
+};
 
 let player1Name = document.getElementById('player1');
 let player1_inputName = document.querySelector("#player1_name input");
@@ -29,10 +28,9 @@ let player1_inputNameParent = document.getElementById("player1_name");
 
 player1_inputName.addEventListener("change", function(event) {
     if (event.target.value != "") {
-        player1Name.innerHTML += ": <br>" + event.target.value;
+        player1Name.innerHTML += ": <br><em>" + event.target.value + "</em>";
         player1_inputNameParent.removeChild(player1_inputName);
-    }
-    //Rajouter de la mise en forme
+    };
 });
 
 let player2Name = document.getElementById('player2');
@@ -41,15 +39,10 @@ let player2_inputNameParent = document.getElementById("player2_name");
 
 player2_inputName.addEventListener("change", function(event) {
     if (event.target.value != "") {
-        player2Name.innerHTML += ": <br>" + event.target.value;
+        player2Name.innerHTML += ": <br><em>" + event.target.value + "</em>";
         player2_inputNameParent.removeChild(player2_inputName);
-    }
-    //Rajouter de la mise en forme
+    };
 });
-
-
-//let changeBackground = document.getElementsByTagName('body');
-//changeBackground.style.background = "autre background à mettre";
 
 
 //Ci-dessous, le bloc pour le calcul des life-points du joueur 1
@@ -198,7 +191,7 @@ player1_inputCalculator.value = "";
 
 let player2_BtnPlus = document.querySelector('#article_player2 button.btn.btn-success');
 let player2_LifePoints = document.querySelector('#article_player2 h2');
-let player2_inputCalculator = document.querySelector('#article_player2 .calculateur input');
+let player2_inputCalculator = document.querySelector('#article_player2 .calculator input');
 let player2_newInputCalculator;
 
 player2_inputCalculator.addEventListener('input', function(e) {
@@ -316,4 +309,10 @@ player2_BtnDivide.addEventListener("click", function() {
 player2_newInputCalculator = null;
 player2_inputCalculator.value = "";
 
+});
+
+let timeToDuelBtn = document.querySelector("img");
+
+timeToDuelBtn.addEventListener("click", function() {
+    playTimeToDuel();
 });
