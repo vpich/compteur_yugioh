@@ -23,83 +23,79 @@ main{
     display: flex;
     flex-direction: row;
     section{
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    article{
-        width: 50%;
-        div{
-        margin-top: 20px;
-        }
-        .calculateur, .calculator{
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin-right: 20px;
-            margin-left: 20px;
-            @media (max-width: 750px) {
-                flex-direction: column;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        article{
+            width: 50%;
+            div{
+                margin-top: 20px;
+                #player1, #player2 {
+                    background-color: rgba(204, 148, 5, 0.5);
+                    border-radius: 15px;
+                    border-style: solid;
+                    box-shadow: 6px 6px 5px black;
+                    font-style: italic;
+                    font-size: 2em;
+                    overflow: hidden;
+                    max-width: 750px;
+                    em{
+                        font-style: normal;
+                        color: #ffff99;
+                        font-size: 1.5em;
+                    }
+                }
+                #player1_historiqueCalcul, #player2_historiqueCalcul {
+                    height: 170px;
+                    resize: none;
+                }
             }
-            button{
-            margin: 1%;
-            font-weight: bold;
-            font-size: 1.2rem;
-            position: right;
-
+            #player1_name, #player2_name {
+                width: 60%;
+                margin: 10% auto;
             }
-
-        }
+            #calculateur, #calculator {
+                &__buttons {
+                    display: flex;
+                    margin-left: 3px;
+                    align-items: right;
+                }
+            }
+            .calculateur, .calculator{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                margin-right: 20px;
+                margin-left: 20px;
+                @media (max-width: 750px) {
+                    flex-direction: column;
+                }
+                button{
+                    margin: 1%;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    position: right;
+                }
+            }
+            .life_points{
+                font-size: 6rem;
+                background: url("../../images/pouet2.jpg");
+                background-size: cover;
+                height: 180px;
+                width: 230px;
+                color: yellow;
+                display: inline-block;
+                margin-top: 20px;
+                text-align: center;
+                padding-top: 20px;
+                border: outset rgb(204, 148, 5);
+                box-shadow: 6px 6px 5px black;
+            }
         }
     }
 }
 
-#player1, #player2 {
-    background-color: rgba(204, 148, 5, 0.5);
-    border-radius: 15px;
-    border-style: solid;
-    box-shadow: 6px 6px 5px black;
-    font-style: italic;
-    font-size: 2em;
-    overflow: hidden;
-    max-width: 750px;
-    em{
-        font-style: normal;
-        color: #ffff99;
-        font-size: 1.5em;
-    }
-}
-
-#player1_name, #player2_name {
-    width: 60%;
-    margin: 10% auto;
-}
-
-#calculateur__buttons, #calculator__buttons {
-    display: flex;
-    margin-left: 3px;
-    align-items: right;
-}
-
-.life_points{
-    font-size: 6rem;
-    background: url("../../images/pouet2.jpg");
-    background-size: cover;
-    height: 180px;
-    width: 230px;
-    color: yellow;
-    display: inline-block;
-    margin-top: 20px;
-    text-align: center;
-    padding-top: 20px;
-    border: outset rgb(204, 148, 5);
-    box-shadow: 6px 6px 5px black;
-}
-
-#player1_historiqueCalcul, #player2_historiqueCalcul {
-    height: 170px;
-    resize: none;
-}
 
 footer{
     text-align: center;
