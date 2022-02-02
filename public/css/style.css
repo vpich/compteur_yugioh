@@ -1,0 +1,117 @@
+body {
+  background-image: url("https://wallpaperaccess.com//full/127131.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-shadow: black 0.4em 0.4em 0.4em;
+  display: flex;
+  flex-direction: column;
+}
+body header {
+  text-align: center;
+  margin: 10px;
+}
+body header a {
+  text-decoration: none;
+  color: white;
+}
+body header a:hover {
+  color: yellow;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+main section {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+main section article {
+  width: 50%;
+}
+main section article div {
+  margin-top: 20px;
+}
+main section article div #player1, main section article div #player2 {
+  background-color: rgba(204, 148, 5, 0.5);
+  border-radius: 15px;
+  border-style: solid;
+  box-shadow: 6px 6px 5px black;
+  font-style: italic;
+  font-size: 2em;
+  overflow: hidden;
+  max-width: 750px;
+}
+main section article div #player1 em, main section article div #player2 em {
+  font-style: normal;
+  color: #ffff99;
+  font-size: 1.5em;
+}
+main section article div #player1_historiqueCalcul, main section article div #player2_historiqueCalcul {
+  height: 170px;
+  resize: none;
+}
+main section article #player1_name, main section article #player2_name {
+  width: 60%;
+  margin: 10% auto;
+}
+main section article #calculateur__buttons, main section article #calculator__buttons {
+  display: flex;
+  margin-left: 3px;
+  align-items: right;
+}
+main section article .calculateur, main section article .calculator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+@media (max-width: 750px) {
+  main section article .calculateur, main section article .calculator {
+    flex-direction: column;
+  }
+}
+main section article .calculateur button, main section article .calculator button {
+  margin: 1%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: right;
+}
+main section article .life_points {
+  font-size: 6rem;
+  background: url("../../images/pouet2.jpg");
+  background-size: cover;
+  height: 180px;
+  width: 230px;
+  color: yellow;
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 20px;
+  border: outset #cc9405;
+  box-shadow: 6px 6px 5px black;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+footer img {
+  position: absolute;
+  border-style: ridge;
+  border-color: brown;
+  bottom: 0px;
+  right: 0px;
+}
+
+@media (max-width: 750px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
