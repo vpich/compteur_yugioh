@@ -59,23 +59,20 @@ main{
                 &__buttons {
                     display: flex;
                     margin-left: 3px;
-                    align-items: right;
                 }
             }
             .calculateur, .calculator{
                 display: flex;
                 align-items: center;
-                text-align: center;
-                margin-right: 20px;
-                margin-left: 20px;
+                justify-content: center;
                 @media (max-width: 750px) {
                     flex-direction: column;
+                    align-items: center;
                 }
                 button{
                     margin: 1%;
                     font-weight: bold;
                     font-size: 1.2rem;
-                    position: right;
                 }
             }
             .life_points{

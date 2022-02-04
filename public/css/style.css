@@ -61,25 +61,22 @@ main section article #player1_name, main section article #player2_name {
 main section article #calculateur__buttons, main section article #calculator__buttons {
   display: flex;
   margin-left: 3px;
-  align-items: right;
 }
 main section article .calculateur, main section article .calculator {
   display: flex;
   align-items: center;
-  text-align: center;
-  margin-right: 20px;
-  margin-left: 20px;
+  justify-content: center;
 }
 @media (max-width: 750px) {
   main section article .calculateur, main section article .calculator {
     flex-direction: column;
+    align-items: center;
   }
 }
 main section article .calculateur button, main section article .calculator button {
   margin: 1%;
   font-weight: bold;
   font-size: 1.2rem;
-  position: right;
 }
 main section article .life_points {
   font-size: 6rem;
